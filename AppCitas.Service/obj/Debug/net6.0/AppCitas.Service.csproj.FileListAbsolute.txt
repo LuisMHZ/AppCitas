@@ -65,3 +65,4 @@ C:\Users\luism\Documents\Visual Studio 2022\Repos\AppCitas\AppCitas.Service\obj\
 C:\Users\luism\Documents\Visual Studio 2022\Repos\AppCitas\AppCitas.Service\obj\Debug\net6.0\AppCitas.Service.pdb
 C:\Users\luism\Documents\Visual Studio 2022\Repos\AppCitas\AppCitas.Service\obj\Debug\net6.0\AppCitas.Service.genruntimeconfig.cache
 C:\Users\luism\Documents\Visual Studio 2022\Repos\AppCitas\AppCitas.Service\obj\Debug\net6.0\ref\AppCitas.Service.dll
+C:\Users\luism\Documents\Visual Studio 2022\Repos\AppCitas\AppCitas.Service\bin\Debug\net6.0\Newtonsoft.Json.dll
