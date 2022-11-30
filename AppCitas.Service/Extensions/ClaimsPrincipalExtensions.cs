@@ -14,4 +14,3 @@ public static class ClaimsPrincipalExtensions
         return int.Parse(user.FindFirst(ClaimTypes.NameIdentifier)?.Value);
     }
 }
-
