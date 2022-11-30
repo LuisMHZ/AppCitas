@@ -3,7 +3,6 @@ using AppCitas.Service.Interfaces;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.Extensions.Options;
-using System.Security.Principal;
 
 namespace AppCitas.Service.Services;
 
