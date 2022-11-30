@@ -1,4 +1,6 @@
-﻿namespace AppCitas.Service.DTOs;
+﻿using AppCitas.Service.Entities;
+
+namespace AppCitas.Service.DTOs;
 
 public class MemberDto
 {
