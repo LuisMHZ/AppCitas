@@ -21,3 +21,7 @@
 *.vsidx
 /.vs/AppCitas.Service/FileContentIndex/c7dfc1d1-e224-49ca-a581-93c429b26d83.vsidx
 /.vs/AppCitas.Service/v17/.suo
+/.vs/AppCitas.Service/FileContentIndex
+/AppCitas.Service/obj/Debug/net6.0
+/AppCitas.Service/obj
+/AppCitas.Service/bin/Debug/net6.0
