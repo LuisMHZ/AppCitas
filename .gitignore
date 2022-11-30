@@ -1,0 +1,23 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Curso Servicios Web - REST.postman_collection.json
+/.vs/AppCitas.Service/FileContentIndex/58754e47-03e2-4019-a927-cd963758beed.vsidx
+/Curso Servicios Web - REST.postman_collection.json
+/AppCitas.Service/appcitas.db-shm
+/AppCitas.Service/appcitas.db-wal
+/AppCitas.Service/obj/Debug/net6.0/AppCitas.Service.csproj.CoreCompileInputs.cache
+/AppCitas.Service/obj/Debug/net6.0/AppCitas.Service.MvcApplicationPartsAssemblyInfo.cs
+/AppCitas.Service/obj/Debug/net6.0/AppCitas.Service.dll
+/AppCitas.Service/obj/Debug/net6.0/AppCitas.Service.pdb
+/AppCitas.Service/obj/Debug/net6.0/ref/AppCitas.Service.dll
+/AppCitas.Service/bin/Debug/net6.0/AppCitas.Service.dll
+/AppCitas.Service/bin/Debug/net6.0/AppCitas.Service.pdb
+/AppCitas.Service/obj/Debug/net6.0/refint/AppCitas.Service.dll
+/.vs/AppCitas.Service/DesignTimeBuild/.dtbcache.v2
+/.vs/AppCitas.Service/FileContentIndex/612ece52-50ef-456d-b7cf-79445db89a25.vsidx
+/.vs/AppCitas.Service/FileContentIndex/895d86c1-4c77-4eca-9031-24492154c8b8.vsidx
+*.vsidx
+/.vs/AppCitas.Service/FileContentIndex/c7dfc1d1-e224-49ca-a581-93c429b26d83.vsidx
+/.vs/AppCitas.Service/v17/.suo
