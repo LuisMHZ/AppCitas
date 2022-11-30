@@ -1,32 +1,31 @@
 ﻿using AppCitas.Service.Data;
 using AppCitas.Service.Entities;
+using AppCitas.Service.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace AppCitas.Service.Controllers;
 
+[Authorize]
 public class UsersController : BaseApiController
 {
-    private readonly DataContext _context;
+    private readonly IUserRepository _userRepository;
 
-    public UsersController(DataContext context)
+    public UsersController(IUserRepository userRepository)
     {
-        _context = context;
+        _userRepository = userRepository;
     }
 
     [HttpGet]
-    [AllowAnonymous]
     public async Task<ActionResult<IEnumerable<AppUser>>> GetUsers()
     {
-        return await _context.Users.ToListAsync();
+        return Ok(await _userRepository.GetUsersAsync());
     }
 
-    [HttpGet("{id}")]
-    [Authorize]
-    public async Task<ActionResult<AppUser>> GetUserById(int id)
+    [HttpGet("{username}")]
+    public async Task<ActionResult<AppUser>> GetUserByUsername(string username)
     {
-        return await _context.Users.FindAsync(id);
+        return await _userRepository.GetUserByUsernameAsync(username);
     }
 }

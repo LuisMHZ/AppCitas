@@ -13,8 +13,8 @@
     "Country": "Djibouti",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/12.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/12.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -32,8 +32,8 @@
     "Country": "Ghana",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/30.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/30.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -51,8 +51,8 @@
     "Country": "Chad",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/69.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/69.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -70,8 +70,8 @@
     "Country": "Morocco",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/9.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/9.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -89,8 +89,8 @@
     "Country": "Japan",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/women/14.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/women/14.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -108,8 +108,8 @@
     "Country": "Afghanistan",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/53.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/men/53.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -127,8 +127,8 @@
     "Country": "Cook Islands",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/67.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/men/67.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -146,8 +146,8 @@
     "Country": "Guyana",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/90.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/men/90.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -165,8 +165,8 @@
     "Country": "India",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/93.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/men/93.jpg",
+        "IsMain": true
       }
     ]
   },
@@ -184,8 +184,8 @@
     "Country": "Gabon",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/men/79.jpg",
-        "isMain": true
+        "Url": "https://randomuser.me/api/portraits/men/79.jpg",
+        "IsMain": true
       }
     ]
   }
