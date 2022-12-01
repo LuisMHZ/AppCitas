@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AppCitas.Service.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20221129212430_ExtendedUserEntity")]
+    [Migration("20220923124609_ExtendedUserEntity")]
     partial class ExtendedUserEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

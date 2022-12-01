@@ -1,12 +1,5 @@
-using System.Text;
-using AppCitas.Service.Data;
 using AppCitas.Service.Extensions;
-using AppCitas.Service.Interfaces;
 using AppCitas.Service.Middleware;
-using AppCitas.Service.Services;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 
 namespace AppCitas;
@@ -40,7 +33,7 @@ public class Startup
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseMiddleware<ExceptionMiddleware>();
-  
+
         app.UseHttpsRedirection();
 
         app.UseRouting();
