@@ -13,5 +13,5 @@ public interface IUserRepository
     void Update(AppUser user);
 
     Task<MemberDto> GetMemberAsync(string username);
-    Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams); 
+    Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
 }

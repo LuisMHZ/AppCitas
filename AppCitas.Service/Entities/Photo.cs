@@ -2,7 +2,7 @@
 
 namespace AppCitas.Service.Entities;
 
-[Table("Photos")] 
+[Table("Photos")]
 public class Photo
 {
     public int Id { get; set; }
