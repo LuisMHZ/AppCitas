@@ -1,2 +1,2 @@
 # AppCitas
-Aplicación de Servicios Web - Ingeniería en Computación Inteligente 9no Semestre
+Curso de Servicios Web para ICI de noveno semestre.

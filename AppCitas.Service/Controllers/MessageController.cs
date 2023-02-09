@@ -79,7 +79,7 @@ public class MessagesController : BaseApiController
     {
         var username = User.GetUsername();
         var message = await _messageRepository.GetMessage(id);
-
+        
         if (!message.Sender.UserName.Equals(username) && !message.Recipient.UserName.Equals(username))
             return Unauthorized();
 
