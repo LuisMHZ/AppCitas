@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity;
 
-namespace AppCitas.Service.Entities;
-
-public class AppUserRole : IdentityUserRole<int>
+namespace API.Entities
 {
-    public AppUser User { get; set; }
-    public AppRole Role { get; set; }
+    public class AppUserRole : IdentityUserRole<int>
+    {
+        public AppUser User { get; set; }
+        public AppRole Role { get; set; }
+    }
 }

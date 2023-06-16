@@ -3,18 +3,20 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace AppCitas.Service.Data.Migrations
+namespace API.Data.Migrations
 {
+    /// <inheritdoc />
     public partial class IdentityAdded : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Likes_Users_LikedUserId",
+                name: "FK_Likes_Users_SourceUserId",
                 table: "Likes");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Likes_Users_SourceUserId",
+                name: "FK_Likes_Users_TargetUserId",
                 table: "Likes");
 
             migrationBuilder.DropForeignKey(
@@ -294,17 +296,17 @@ namespace AppCitas.Service.Data.Migrations
                 column: "RoleId");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Likes_AspNetUsers_LikedUserId",
+                name: "FK_Likes_AspNetUsers_SourceUserId",
                 table: "Likes",
-                column: "LikedUserId",
+                column: "SourceUserId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Likes_AspNetUsers_SourceUserId",
+                name: "FK_Likes_AspNetUsers_TargetUserId",
                 table: "Likes",
-                column: "SourceUserId",
+                column: "TargetUserId",
                 principalTable: "AspNetUsers",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
@@ -334,14 +336,15 @@ namespace AppCitas.Service.Data.Migrations
                 onDelete: ReferentialAction.Cascade);
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_Likes_AspNetUsers_LikedUserId",
+                name: "FK_Likes_AspNetUsers_SourceUserId",
                 table: "Likes");
 
             migrationBuilder.DropForeignKey(
-                name: "FK_Likes_AspNetUsers_SourceUserId",
+                name: "FK_Likes_AspNetUsers_TargetUserId",
                 table: "Likes");
 
             migrationBuilder.DropForeignKey(
@@ -459,17 +462,17 @@ namespace AppCitas.Service.Data.Migrations
                 column: "Id");
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Likes_Users_LikedUserId",
+                name: "FK_Likes_Users_SourceUserId",
                 table: "Likes",
-                column: "LikedUserId",
+                column: "SourceUserId",
                 principalTable: "Users",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Likes_Users_SourceUserId",
+                name: "FK_Likes_Users_TargetUserId",
                 table: "Likes",
-                column: "SourceUserId",
+                column: "TargetUserId",
                 principalTable: "Users",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);

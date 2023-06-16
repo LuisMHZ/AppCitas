@@ -2,10 +2,12 @@
 
 #nullable disable
 
-namespace AppCitas.Service.Data.Migrations
+namespace API.Data.Migrations
 {
+    /// <inheritdoc />
     public partial class PhotoApprovalAdded : Migration
     {
+        /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<bool>(
@@ -14,24 +16,14 @@ namespace AppCitas.Service.Data.Migrations
                 type: "INTEGER",
                 nullable: false,
                 defaultValue: false);
-
-            migrationBuilder.AddColumn<int>(
-                name: "TargetUserId",
-                table: "Likes",
-                type: "INTEGER",
-                nullable: false,
-                defaultValue: 0);
         }
 
+        /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
                 name: "IsApproved",
                 table: "Photos");
-
-            migrationBuilder.DropColumn(
-                name: "TargetUserId",
-                table: "Likes");
         }
     }
 }

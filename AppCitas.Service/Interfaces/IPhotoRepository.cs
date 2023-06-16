@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using AppCitas.Service.DTOs;
-using AppCitas.Service.Entities;
+using API.DTOs;
+using API.Entities;
 
-namespace AppCitas.Service.Interfaces
+namespace API.Interfaces
 {
     public interface IPhotoRepository
     {

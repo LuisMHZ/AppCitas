@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
 
-namespace AppCitas.Service.Entities;
-
-public class AppRole : IdentityRole<int>
+namespace API.Entities
 {
-    public ICollection<AppUserRole> UserRoles { get; set; }
+    public class AppRole : IdentityRole<int>
+    {
+        public ICollection<AppUserRole> UserRoles { get; set; }
+    }
 }
