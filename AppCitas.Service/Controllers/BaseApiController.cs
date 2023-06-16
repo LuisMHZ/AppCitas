@@ -8,4 +8,5 @@ namespace AppCitas.Service.Controllers;
 [Route("api/[controller]")]
 public class BaseApiController : ControllerBase
 {
+
 }

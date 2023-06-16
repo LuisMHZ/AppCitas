@@ -2,7 +2,7 @@
 
 public class ApiException
 {
-    public ApiException(int statusCode, string message = null, string details = null)
+    public ApiException(int statusCode, string message, string details)
     {
         StatusCode = statusCode;
         Message = message;

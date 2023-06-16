@@ -2,12 +2,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-
 namespace AppCitas.Service.Data;
-
 public class DataContext : IdentityDbContext<AppUser, AppRole, int,
-    IdentityUserClaim<int>, AppUserRole, IdentityUserLogin<int>,
-    IdentityRoleClaim<int>, IdentityUserToken<int>>
+        IdentityUserClaim<int>, AppUserRole, IdentityUserLogin<int>,
+        IdentityRoleClaim<int>, IdentityUserToken<int>>
 {
     public DataContext(DbContextOptions options) : base(options)
     {
@@ -15,6 +13,9 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int,
 
     public DbSet<UserLike> Likes { get; set; }
     public DbSet<Message> Messages { get; set; }
+    public DbSet<Group> Groups { get; set; }
+    public DbSet<Connection> Connections { get; set; }
+    public DbSet<Photo> Photos { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -33,7 +34,7 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int,
             .IsRequired();
 
         builder.Entity<UserLike>()
-            .HasKey(k => new { k.SourceUserId, k.LikedUserId });
+            .HasKey(k => new { k.SourceUserId, k.TargetUserId });
 
         builder.Entity<UserLike>()
             .HasOne(s => s.SourceUser)
@@ -42,9 +43,9 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int,
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<UserLike>()
-            .HasOne(s => s.LikedUser)
+            .HasOne(s => s.TargetUser)
             .WithMany(l => l.LikedByUsers)
-            .HasForeignKey(s => s.LikedUserId)
+            .HasForeignKey(s => s.TargetUserId)
             .OnDelete(DeleteBehavior.Cascade);
 
         builder.Entity<Message>()
@@ -56,5 +57,7 @@ public class DataContext : IdentityDbContext<AppUser, AppRole, int,
             .HasOne(u => u.Sender)
             .WithMany(m => m.MessagesSent)
             .OnDelete(DeleteBehavior.Restrict);
+
+        builder.Entity<Photo>().HasQueryFilter(p => p.IsApproved);
     }
 }

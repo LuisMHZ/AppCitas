@@ -9,7 +9,6 @@ namespace AppCitas.Service.Services;
 public class PhotoService : IPhotoService
 {
     private readonly Cloudinary _cloudinary;
-
     public PhotoService(IOptions<CloudinarySettings> config)
     {
         var acc = new Account
@@ -22,17 +21,18 @@ public class PhotoService : IPhotoService
         _cloudinary = new Cloudinary(acc);
     }
 
-    public async Task<ImageUploadResult> AddPhotoAsync(IFormFile photoFile)
+    public async Task<ImageUploadResult> AddPhotoAsync(IFormFile file)
     {
         var uploadResult = new ImageUploadResult();
 
-        if (photoFile.Length > 0)
+        if (file.Length > 0)
         {
-            using var stream = photoFile.OpenReadStream();
+            using var stream = file.OpenReadStream();
             var uploadParams = new ImageUploadParams
             {
-                File = new FileDescription(photoFile.FileName, stream),
-                Transformation = new Transformation().Height(500).Width(500).Crop("fill").Gravity("face")
+                File = new FileDescription(file.FileName, stream),
+                Transformation = new Transformation().Height(500).Width(500).Crop("fill").Gravity("face"),
+                Folder = "da-net7"
             };
             uploadResult = await _cloudinary.UploadAsync(uploadParams);
         }
@@ -44,8 +44,6 @@ public class PhotoService : IPhotoService
     {
         var deleteParams = new DeletionParams(publicId);
 
-        var result = await _cloudinary.DestroyAsync(deleteParams);
-
-        return result;
+        return await _cloudinary.DestroyAsync(deleteParams);
     }
 }

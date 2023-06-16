@@ -8,17 +8,16 @@ namespace AppCitas.Service.Controllers;
 public class BuggyController : BaseApiController
 {
     private readonly DataContext _context;
-
     public BuggyController(DataContext context)
     {
         _context = context;
     }
 
-    [HttpGet("auth")]
     [Authorize]
+    [HttpGet("auth")]
     public ActionResult<string> GetSecret()
     {
-        return "Secret text";
+        return "secret text";
     }
 
     [HttpGet("not-found")]
@@ -28,7 +27,7 @@ public class BuggyController : BaseApiController
 
         if (thing == null) return NotFound();
 
-        return Ok(thing);
+        return thing;
     }
 
     [HttpGet("server-error")]
@@ -44,6 +43,6 @@ public class BuggyController : BaseApiController
     [HttpGet("bad-request")]
     public ActionResult<string> GetBadRequest()
     {
-        return BadRequest("This is not a good request");
+        return BadRequest("This was not a good request");
     }
 }

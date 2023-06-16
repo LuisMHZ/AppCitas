@@ -12,6 +12,8 @@ public interface IUserRepository
     Task<bool> SaveAllAsync();
     void Update(AppUser user);
 
-    Task<MemberDto> GetMemberAsync(string username);
+    Task<MemberDto> GetMemberAsync(string username, bool isCurrentUser);
     Task<PagedList<MemberDto>> GetMembersAsync(UserParams userParams);
+    Task<AppUser> GetUserByPhotoId(int photoId);
+
 }
